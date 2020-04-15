@@ -1,4 +1,4 @@
-# GAME-PROJECT ENG/TR
+# GAME-PROJECT ENG/TR VIEW RAW
 Game project launched at 04.15.2020
 There are the milestones We set.
 0.0.1 Character Movement-Loading Scenes
