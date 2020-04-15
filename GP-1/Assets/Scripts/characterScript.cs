@@ -19,6 +19,9 @@ public class characterScript : MonoBehaviour
     private float halfHeight;
     private float halfWidth;
 
+    public bool onLoadingScreen = false;
+    public bool staticSet = false;
+
     
     public string areaTransitionName;
 
@@ -44,7 +47,20 @@ public class characterScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical"))*speed;
+        if(!onLoadingScreen)
+        {
+            gameObject.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            staticSet=false;
+            rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical"))*speed;
+        }
+       else
+       {
+           if(!staticSet)
+           {
+            gameObject.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+           }           
+           staticSet=true;
+       }
         
         if(rb.velocity.x!=0||rb.velocity.y!=0)
         {
@@ -61,6 +77,14 @@ public class characterScript : MonoBehaviour
         //TUNED WORKING LIKE A CHARM!!! REQUIRES TESTING ON DIFFERENT ASPECT RATIOS AND RESOLUTIONS
         bottomLeftLimit = botLeft + new Vector3(0.1f,0.1f,0f);
         topRightLimit = topRight + new Vector3(-0.1f,-0.1f,0f);
+    }
+    public void Move()
+    {
+        onLoadingScreen=false;
+    }
+    public void DontMove()
+    {
+        onLoadingScreen=true;
     }
 
 }

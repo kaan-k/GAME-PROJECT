@@ -36,6 +36,7 @@ public class areaExit : MonoBehaviour
         //Check collision with player.
         if(other.tag == "Player")
         {
+            characterScript.instance.DontMove();
             //If collided load area.
             //--SceneManager.LoadScene(areaToLoad); !REMOVED CODE! MOVED TO LINE 30
             shouldLoadAfterFade = true;

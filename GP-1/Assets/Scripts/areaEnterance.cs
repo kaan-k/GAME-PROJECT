@@ -14,5 +14,6 @@ public class areaEnterance : MonoBehaviour
             characterScript.instance.transform.position = transform.position;
         }
         UIFade.instance.fadefromBlack();
+        characterScript.instance.Move();
     }
 }

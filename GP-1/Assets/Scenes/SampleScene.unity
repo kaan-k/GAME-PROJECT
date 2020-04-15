@@ -35858,10 +35858,30 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2481850782284202436, guid: f309045bb00bc814db93d54a23ae9210,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1579498747
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481850782284202436, guid: f309045bb00bc814db93d54a23ae9210,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 2481850782427876123, guid: f309045bb00bc814db93d54a23ae9210,
         type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481850782427876125, guid: f309045bb00bc814db93d54a23ae9210,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1579498747
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481850782427876125, guid: f309045bb00bc814db93d54a23ae9210,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2481850783288377640, guid: f309045bb00bc814db93d54a23ae9210,
         type: 3}
@@ -35876,12 +35896,12 @@ PrefabInstance:
     - target: {fileID: 2481850783288377642, guid: f309045bb00bc814db93d54a23ae9210,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.64
+      value: -2.71
       objectReference: {fileID: 0}
     - target: {fileID: 2481850783288377642, guid: f309045bb00bc814db93d54a23ae9210,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.91
+      value: -0.78
       objectReference: {fileID: 0}
     - target: {fileID: 2481850783288377642, guid: f309045bb00bc814db93d54a23ae9210,
         type: 3}
@@ -35928,20 +35948,60 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2481850783288377643, guid: f309045bb00bc814db93d54a23ae9210,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481850783288377645, guid: f309045bb00bc814db93d54a23ae9210,
+        type: 3}
+      propertyPath: onLoadingScreen
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2481850783374505973, guid: f309045bb00bc814db93d54a23ae9210,
         type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481850783374505975, guid: f309045bb00bc814db93d54a23ae9210,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1579498747
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481850783374505975, guid: f309045bb00bc814db93d54a23ae9210,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2481850783482609975, guid: f309045bb00bc814db93d54a23ae9210,
         type: 3}
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2481850783482609977, guid: f309045bb00bc814db93d54a23ae9210,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1579498747
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481850783482609977, guid: f309045bb00bc814db93d54a23ae9210,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 2481850783502168038, guid: f309045bb00bc814db93d54a23ae9210,
         type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481850783502168040, guid: f309045bb00bc814db93d54a23ae9210,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1579498747
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481850783502168040, guid: f309045bb00bc814db93d54a23ae9210,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f309045bb00bc814db93d54a23ae9210, type: 3}
