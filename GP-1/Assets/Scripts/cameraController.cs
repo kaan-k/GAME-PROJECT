@@ -14,7 +14,7 @@ public class cameraController : MonoBehaviour
     void Start()
     {
         //Script execution order.
-        //---target = characterScript.instance.transform;
+        //---target = characterScript.instance.transform; !REMOVED CODE! MOVED AND CHANGED AT LINE 18 CHANGE LOG: Now target is looking for a game object with characterScript attached to it.
         target = FindObjectOfType<characterScript>().transform;
         halfHeight = Camera.main.orthographicSize;
         halfWidth = halfHeight*Camera.main.aspect;

@@ -14,8 +14,8 @@ public class UIFade : MonoBehaviour
     void Start()
     {
         //Make this only instance;
-        //---instance = this;
-        //---DontDestroyOnLoad(gameObject);
+        //---instance = this; !REMOVED CODE! MOVED TO LINE 19
+        //---DontDestroyOnLoad(gameObject); !REMOVED CODE! MOVED TO LINE 32
         if(instance == null)
         {
             //Instance if null.
@@ -29,11 +29,8 @@ public class UIFade : MonoBehaviour
                 Destroy(gameObject);
             } 
         }
-
-        DontDestroyOnLoad(gameObject);
+         DontDestroyOnLoad(gameObject);
     }
-
-    // Update is called once per frame
     void Update()
     {
         if(shouldFadeToBlack)
@@ -47,6 +44,7 @@ public class UIFade : MonoBehaviour
         }
         if(shouldFadeFromBlack)
         {
+            //-- alpha
             fadeScreen.color = new Color(fadeScreen.color.r,fadeScreen.color.g,fadeScreen.color.b,Mathf.MoveTowards(fadeScreen.color.a,0f,fadeSpeed*Time.deltaTime));
             if(fadeScreen.color.a == 0f)
             {

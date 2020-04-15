@@ -19,10 +19,4 @@ public class essentialLoader : MonoBehaviour
            characterScript.instance = clone;
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

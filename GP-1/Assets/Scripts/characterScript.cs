@@ -58,7 +58,7 @@ public class characterScript : MonoBehaviour
     }
     public void SetBounds(Vector3 botLeft,Vector3 topRight)
     {
-        //TUNING REQ!!!
+        //TUNED WORKING LIKE A CHARM!!! REQUIRES TESTING ON DIFFERENT ASPECT RATIOS AND RESOLUTIONS
         bottomLeftLimit = botLeft + new Vector3(0.1f,0.1f,0f);
         topRightLimit = topRight + new Vector3(-0.1f,-0.1f,0f);
     }

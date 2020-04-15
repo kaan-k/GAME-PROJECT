@@ -37,7 +37,7 @@ public class areaExit : MonoBehaviour
         if(other.tag == "Player")
         {
             //If collided load area.
-            //--SceneManager.LoadScene(areaToLoad);
+            //--SceneManager.LoadScene(areaToLoad); !REMOVED CODE! MOVED TO LINE 30
             shouldLoadAfterFade = true;
             UIFade.instance.fadetoBlack();
             //Get the instance areaTransitionName and set to be equal to this areaTransitionName.
