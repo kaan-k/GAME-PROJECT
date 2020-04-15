@@ -13,6 +13,12 @@ public class characterScript : MonoBehaviour
     //Instancing the player to prevent duplicates.
     public static characterScript instance;
 
+    private Vector3 bottomLeftLimit;
+    private Vector3 topRightLimit;
+
+    private float halfHeight;
+    private float halfWidth;
+
     
     public string areaTransitionName;
 
@@ -25,15 +31,18 @@ public class characterScript : MonoBehaviour
         }
         else
         {
-            //Destroy duplicate if instance exists.
-            Destroy(gameObject);
+            if(instance != this)
+            {
+                //Destroy duplicate if instance exists.
+                Destroy(gameObject);
+            } 
         }
 
         DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical"))*speed;
         
@@ -45,5 +54,13 @@ public class characterScript : MonoBehaviour
         {
             animator.SetBool("isRunning",false);
         }
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x,bottomLeftLimit.x,topRightLimit.x),Mathf.Clamp(transform.position.y,bottomLeftLimit.y,topRightLimit.y),transform.position.z);
     }
+    public void SetBounds(Vector3 botLeft,Vector3 topRight)
+    {
+        //TUNING REQ!!!
+        bottomLeftLimit = botLeft + new Vector3(0.1f,0.1f,0f);
+        topRightLimit = topRight + new Vector3(-0.1f,-0.1f,0f);
+    }
+
 }

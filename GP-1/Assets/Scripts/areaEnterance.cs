@@ -13,5 +13,6 @@ public class areaEnterance : MonoBehaviour
             //Set player position to enterance position.
             characterScript.instance.transform.position = transform.position;
         }
+        UIFade.instance.fadefromBlack();
     }
 }
