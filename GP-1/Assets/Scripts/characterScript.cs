@@ -10,8 +10,26 @@ public class characterScript : MonoBehaviour
     public int speed;
     //Animator is defined.
     public Animator animator;
+    //Instancing the player to prevent duplicates.
+    public static characterScript instance;
+
+    
+    public string areaTransitionName;
+
     void Start()
     {
+        if(instance == null)
+        {
+            //Instance if null.
+            instance = this;
+        }
+        else
+        {
+            //Destroy duplicate if instance exists.
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
