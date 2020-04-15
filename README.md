@@ -1,7 +1,7 @@
 # GAME-PROJECT ENG/TR
 Game project launched at 04.15.2020
 There are the milestones We set.
-0.0.1 Character Movement,Loading Scenes
+0.0.1 Character Movement-Loading Scenes
 0.0.2 Camera-Map
 0.0.3 Dialogue System
 0.0.4 Level System
