@@ -11,7 +11,7 @@ public class essentialLoader : MonoBehaviour
     {
         if(UIFade.instance == null)
         {
-           UIFade.instance = Instantiate(UIScreen).GetComponent<UIFade>();
+            UIFade.instance = Instantiate(UIScreen).GetComponent<UIFade>();
         }
         if(characterScript.instance == null)
         {

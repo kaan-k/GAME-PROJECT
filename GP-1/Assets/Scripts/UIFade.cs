@@ -14,22 +14,10 @@ public class UIFade : MonoBehaviour
     void Start()
     {
         //Make this only instance;
-        //---instance = this; !REMOVED CODE! MOVED TO LINE 19
-        //---DontDestroyOnLoad(gameObject); !REMOVED CODE! MOVED TO LINE 32
-        if(instance == null)
-        {
-            //Instance if null.
-            instance = this;
-        }
-        else
-        {
-            if(instance != this)
-            {
-                //Destroy duplicate if instance exists.
-                Destroy(gameObject);
-            } 
-        }
-         DontDestroyOnLoad(gameObject);
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+
+
     }
     void Update()
     {

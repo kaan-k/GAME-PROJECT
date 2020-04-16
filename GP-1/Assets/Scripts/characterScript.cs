@@ -55,6 +55,7 @@ public class characterScript : MonoBehaviour
         }
        else
        {
+           //EXPERIMENTAL. TRY SETTING VELOCY TO 0 IF BUGS ACCUR.
            if(!staticSet)
            {
             gameObject.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
