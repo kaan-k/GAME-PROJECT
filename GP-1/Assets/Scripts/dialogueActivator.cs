@@ -14,6 +14,7 @@ public class dialogueActivator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Change dialogue start button to something else.
         if(canActivate && Input.GetButtonDown("Fire1") && !dialogueManager.instance.dialogueBox.activeInHierarchy)
         {
             dialogueManager.instance.ShowDialogue(lines);

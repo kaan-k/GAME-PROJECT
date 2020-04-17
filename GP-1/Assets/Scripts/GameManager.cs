@@ -8,8 +8,21 @@ public class GameManager : MonoBehaviour
     public characterStats[] characterStats;
     void Start()
     {
-        instance = this;
+        if(instance == null)
+        {
+            //Instance if null.
+            instance = this;
+        }
+        else
+        {
+            if(instance != this)
+            {
+                //Destroy duplicate if instance exists.
+                Destroy(gameObject);
+            } 
+        }
         DontDestroyOnLoad(gameObject);
+
         
     }
 

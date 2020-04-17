@@ -11,10 +11,23 @@ public class UIFade : MonoBehaviour
     public bool shouldFadeToBlack;
     public bool shouldFadeFromBlack;
     // Start is called before the first frame update
+    
     void Start()
     {
         //Make this only instance;
-        instance = this;
+        if(instance == null)
+        {
+            //Instance if null.
+            instance = this;
+        }
+        else
+        {
+            if(instance != this)
+            {
+                //Destroy duplicate if instance exists.
+                Destroy(gameObject);
+            } 
+        }
         DontDestroyOnLoad(gameObject);
 
 
