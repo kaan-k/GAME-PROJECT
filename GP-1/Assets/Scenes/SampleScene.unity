@@ -11967,6 +11967,7 @@ GameObject:
   - component: {fileID: 785921449}
   - component: {fileID: 785921448}
   - component: {fileID: 785921447}
+  - component: {fileID: 785921452}
   m_Layer: 0
   m_Name: deneme_2_0
   m_TagString: Untagged
@@ -12100,6 +12101,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &785921452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785921446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218c571f427b539468524c66f0310eff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charName: 
+  playerLevel: 0
+  currentEXP: 5
+  expTonextLVL: 
+  maxLevel: 10
+  baseEXP: 1000
+  currentHP: 0
+  maxHP: 50
+  currentMP: 0
+  maxMP: 70
+  mpLvlBonus: 
+  str: 0
+  def: 0
+  wpnStr: 0
+  armStr: 0
+  equippedWpn: 
+  equippedArm: 
+  charImg: {fileID: 0}
 --- !u!1001 &887144709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12219,6 +12250,50 @@ Transform:
   - {fileID: 268716355}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1204196079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1204196081}
+  - component: {fileID: 1204196080}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1204196080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204196079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00e2e4b34768d0a4d890bb152bf0987a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterStats: []
+--- !u!4 &1204196081
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204196079}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.8915285, y: -0.37214434, z: -0.8717406}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1331561404
 GameObject:
@@ -34616,6 +34691,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9620251893ac3484796f68a75ee678c3, type: 3}
+--- !u!1 &1765346605 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2481850783288377640, guid: f309045bb00bc814db93d54a23ae9210,
+    type: 3}
+  m_PrefabInstance: {fileID: 2481850783674588945}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1765346606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765346605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218c571f427b539468524c66f0310eff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charName: TEST_MAIN
+  playerLevel: 3
+  currentEXP: 0
+  expTonextLVL: 
+  maxLevel: 75
+  baseEXP: 1000
+  currentHP: 0
+  maxHP: 230
+  currentMP: 0
+  maxMP: 40
+  mpLvlBonus: 
+  str: 0
+  def: 0
+  wpnStr: 0
+  armStr: 0
+  equippedWpn: 
+  equippedArm: 
+  charImg: {fileID: 0}
 --- !u!1 &1845558136
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class areaExit : MonoBehaviour
 {
     // Strings defined.
+    
     public string areaToLoad;
     public string areaTransitionName;
 

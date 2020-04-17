@@ -6,6 +6,7 @@ public class essentialLoader : MonoBehaviour
 {
     public GameObject UIScreen;
     public GameObject player;
+    public GameObject gameManager;
 
     void Start()
     {
@@ -17,6 +18,10 @@ public class essentialLoader : MonoBehaviour
         {
            characterScript clone = Instantiate(player).GetComponent<characterScript>();
            characterScript.instance = clone;
+        }
+        if(GameManager.instance == null)
+        {
+            GameManager.instance = Instantiate(gameManager).GetComponent<GameManager>();
         }
     }
 }
