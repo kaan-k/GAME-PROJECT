@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class characterStats : MonoBehaviour
 {
+    public GameObject displayScreen;
+    public GameObject displayUI;
+    bool displayUIbool;
     public string charName;
     public int playerLevel;
     public int currentEXP;
@@ -25,6 +28,7 @@ public class characterStats : MonoBehaviour
     public Sprite charImg;
     void Start()
     {
+
         expTonextLVL = new int[maxLevel];
         expTonextLVL[1] = baseEXP;
         for(int i = 2;i<expTonextLVL.Length;i++)
@@ -36,10 +40,31 @@ public class characterStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.K))
+        if(displayScreen == null && displayUI == null)
         {
-            AddExp(1000);
+            displayScreen = GameObject.FindGameObjectWithTag("character-stats-display");
+            displayUI = displayScreen.transform.GetChild(0).gameObject;
         }
+        
+        if(Input.GetKeyDown(KeyCode.K))
+        {
+            AddExp(100);
+        }
+        if(Input.GetKeyDown(KeyCode.C))
+        {
+            if(!displayUIbool)
+            {
+                displayUI.SetActive(true);
+                displayUIbool=true;
+            }
+            else
+            {
+                displayUI.SetActive(false);
+                displayUIbool=false;
+            }
+
+        }
+    
     }
     public void AddExp(int expToAdd)
     {
@@ -63,7 +88,11 @@ public class characterStats : MonoBehaviour
 
             maxHP = Mathf.FloorToInt(maxHP*1.05f);
             currentHP = maxHP;
-            maxMP = maxMP+mpLvlBonus[playerLevel];
+            if(mpLvlBonus.Length <= playerLevel)
+            {
+                maxMP = maxMP+mpLvlBonus[playerLevel];
+            }
+            
             currentMP = maxMP;
           }
         }

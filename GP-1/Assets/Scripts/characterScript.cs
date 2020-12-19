@@ -55,7 +55,7 @@ public class characterScript : MonoBehaviour
         }
        else
        {
-           //EXPERIMENTAL. TRY SETTING VELOCY TO 0 IF BUGS ACCUR.
+           //EXPERIMENTAL
            if(!staticSet)
            {
             gameObject.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
@@ -71,11 +71,12 @@ public class characterScript : MonoBehaviour
         {
             animator.SetBool("isRunning",false);
         }
+        
         transform.position = new Vector3(Mathf.Clamp(transform.position.x,bottomLeftLimit.x,topRightLimit.x),Mathf.Clamp(transform.position.y,bottomLeftLimit.y,topRightLimit.y),transform.position.z);
     }
     public void SetBounds(Vector3 botLeft,Vector3 topRight)
     {
-        //TUNED WORKING LIKE A CHARM!!! REQUIRES TESTING ON DIFFERENT ASPECT RATIOS AND RESOLUTIONS
+        
         bottomLeftLimit = botLeft + new Vector3(0.1f,0.1f,0f);
         topRightLimit = topRight + new Vector3(-0.1f,-0.1f,0f);
     }

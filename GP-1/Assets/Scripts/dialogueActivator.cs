@@ -18,6 +18,8 @@ public class dialogueActivator : MonoBehaviour
         if(canActivate && Input.GetButtonDown("Fire1") && !dialogueManager.instance.dialogueBox.activeInHierarchy)
         {
             dialogueManager.instance.ShowDialogue(lines);
+            
+            
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
