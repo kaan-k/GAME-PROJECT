@@ -5,16 +5,6 @@ using UnityEngine.UI;
 
 public class dialogueManager : MonoBehaviour
 {
-    int sizeofList;
-    public List<string> questNames = new List<string>();
-    public bool dialogueActive;
-    
-    public Text[] questTexts;
-    //public Text quest2Text;
-    //public Text quest3Text;
-    public GameObject[] questBoxes;
-    //public GameObject quest2Box;
-    //public GameObject quest3Box;
     public Text dialogueText;
     public Text nameText;
     public GameObject dialogueBox;
@@ -38,44 +28,32 @@ public class dialogueManager : MonoBehaviour
     {
         if(dialogueBox.activeInHierarchy)
         {
-           //ProgressDialogue();
-        }
-    }
-
-    public void ProgressDialogue()
-    {
-                dialogueActive = true;
+            if(Input.GetButtonUp("Fire1"))
+            {
                 characterScript.instance.onLoadingScreen=true;
                 if(!justStarted)
                 {
                         currentLine++;
                     if(currentLine >= dialogueLines.Length)
                     {
-                        dialogueActive = false;
-                        //Dialogue Ended
                         dialogueBox.SetActive(false);
                         nameBox.SetActive(false);
                         characterScript.instance.onLoadingScreen=false;
-<<<<<<< Updated upstream
                         isActive=false;
-=======
-                        DeactivateQuestWindows();
->>>>>>> Stashed changes
                         
                     }
                     else
                     {
                         CheckName();
                         dialogueText.text = dialogueLines[currentLine];
-                        
-                        //write quest names here
                     }
                 }
                 else
                 {
                     justStarted = false;
                 }
-        
+            }
+        }
     }
     public void ShowDialogue(string[] newLines)
     {
@@ -97,28 +75,5 @@ public class dialogueManager : MonoBehaviour
             nameText.text = dialogueLines[currentLine].Replace("n-","");
             currentLine++;
         }
-    }
-
-    public void ActivateQuestWindows(int QuestCount)
-    {
-        for(int x=0; x<=QuestCount-1;x++)
-        {
-            questBoxes[x].SetActive(true);
-            //questTexts[x].text = questNames[x];
-            
-        }
-
-    }
-    public void DeactivateQuestWindows()
-    {
-        foreach(GameObject go in questBoxes)
-        {
-            go.SetActive(false);
-        }
-    
-    }
-    public void GetQuestNames(string questName)
-    {
-        questNames.Add(questName);
     }
 }

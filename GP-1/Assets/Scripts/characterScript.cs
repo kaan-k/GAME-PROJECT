@@ -44,25 +44,7 @@ public class characterScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-<<<<<<< Updated upstream
         rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical"))*speed;
-=======
-        if(!onLoadingScreen)
-        {
-            gameObject.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            staticSet=false;
-            rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical"))*speed;
-        }
-       else
-       {
-           //EXPERIMENTAL
-           if(!staticSet)
-           {
-            gameObject.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-           }           
-           staticSet=true;
-       }
->>>>>>> Stashed changes
         
         if(rb.velocity.x!=0||rb.velocity.y!=0)
         {
