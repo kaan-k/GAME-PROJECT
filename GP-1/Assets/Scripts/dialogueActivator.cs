@@ -6,6 +6,7 @@ public class dialogueActivator : MonoBehaviour
 {
     public string[] lines;
     public bool canActivate;
+    public bool isNull;
     void Start()
     {
         
@@ -17,9 +18,16 @@ public class dialogueActivator : MonoBehaviour
         //Change dialogue start button to something else.
         if(canActivate && Input.GetButtonDown("Fire1") && !dialogueManager.instance.dialogueBox.activeInHierarchy)
         {
-            dialogueManager.instance.ShowDialogue(lines);
-            
-            
+            if(lines.Length>0)
+            {
+                dialogueManager.instance.ShowDialogue(lines);
+                isNull=false;
+            }
+            else
+            {
+                isNull=true;
+            }
+
         }
     }
     private void OnTriggerEnter2D(Collider2D other)

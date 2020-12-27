@@ -7,6 +7,7 @@ public class statsMenu : MonoBehaviour
     public GameObject Player;
     public Text Name;
     public Text EXP;
+    public Text playerLVL;
     string currentLvlExp;
     string nextLvlExp;
 
@@ -38,6 +39,8 @@ public class statsMenu : MonoBehaviour
 
         str.text = "Strenght: "+PlayerObject.str.ToString();
         def.text = "Defence: "+PlayerObject.def.ToString();
+
+        playerLVL.text = "Level: "+PlayerObject.playerLevel.ToString();
 
     }
 }

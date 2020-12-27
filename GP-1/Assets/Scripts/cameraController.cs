@@ -25,6 +25,10 @@ public class cameraController : MonoBehaviour
     }
     void LateUpdate()
     {
+        if(target==null)
+        {
+            target = FindObjectOfType<characterScript>().transform;
+        }
         transform.position = new Vector3(target.position.x,target.position.y,transform.position.z);
 
         //Keep the camera inbounds.

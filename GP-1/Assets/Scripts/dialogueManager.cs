@@ -20,7 +20,6 @@ public class dialogueManager : MonoBehaviour
     {
         instance = this;
         //dialogueText.text = dialogueLines[currentLine];
-        
     }
 
     // Update is called once per frame

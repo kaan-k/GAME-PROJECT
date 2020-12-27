@@ -1,55 +1,99 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class QuestManager : MonoBehaviour
 {
+    public GameObject questWindow;
+    public Text playerCurrentQuestList;
+    public Button[] questButtons;
+    public Button acceptQuestButton;
+    public Text[] questTexts;
+
+    public Text questDesc;
+    public Text questName;
+    public GameObject questNameObject;
+    public List<Quest> currentQuest;
+    public List<Quest> acceptedFromNPC;
+    public int questToAccept;
+
+
+    int buttonsToGenerate;
+
     public static QuestManager instance;
-    public string[] questMarkerNames;
-    //public List<string> actQuests;
-    public bool[] questMarkersComplete;
     void Start()
     {
-       
         instance = this;
-        
-        questMarkersComplete = new bool[questMarkerNames.Length];
     }
 
     // Update is called once per frame
     void Update()
     {
-        //questTracker = new bool[activeQuests.Count];
+        
     }
-    public int GetQuestNumber(string questToFind)
+    public void GenerateButtons(List<Quest> questList)
     {
-        for(int i = 0;i <questMarkerNames.Length;i++)
+        DeactivateButtons();
+        buttonsToGenerate = questList.Count;
+        questWindow.SetActive(true);
+        for(int i = 1;i<=buttonsToGenerate;i++)
         {
-            if(questMarkerNames[i] == questToFind)
+            if(questList[i-1].lvlReq <= characterScript.instance.GetComponent<characterStats>().playerLevel)
             {
-                return i;
+                questButtons[i-1].gameObject.SetActive(true);
+                questTexts[i-1].text = questList[i-1].questTitle;
             }
+            
         }
-        Debug.LogError("Quest "+questToFind+" does not exist.");
-        return 0;
+
     }
-    public bool CheckIfComplete(string questToCheck)
+    public void DeactivateButtons()
     {
-        if(GetQuestNumber(questToCheck)!=0)
+        for(int i = 1;i<=questButtons.Length;i++)
         {
-            return questMarkersComplete[GetQuestNumber(questToCheck)];
+            questButtons[i-1].gameObject.SetActive(false);
+            questTexts[i-1].text = null;
         }
-        return false;
-
+        questDesc.gameObject.SetActive(false);
+        questNameObject.SetActive(false);
+        questName.text = null;
+        questDesc.text = null;
+        questWindow.SetActive(false);
     }
-    public void MarkQuestComplete(string questToMark)
+    public void OpenQuestOne()
     {
-        questMarkersComplete[GetQuestNumber(questToMark)] = true;
+        questToAccept=0;
+        
+        DeactivateButtons();
+        questWindow.SetActive(true);
+        questDesc.gameObject.SetActive(true);
+        questNameObject.SetActive(true);
+        questName.text =currentQuest[0].questTitle;
+        questDesc.text=currentQuest[0].questDescription;
+        
+        
     }
-
-    public void MarkQuestIncomplete(string questToMark)
+    public void OpenQuestTwo()
     {
-        questMarkersComplete[GetQuestNumber(questToMark)] = false;
+        questToAccept=1;
+        DeactivateButtons();
+        questWindow.SetActive(true);
+        questDesc.gameObject.SetActive(true);
+        questNameObject.SetActive(true);
+        questName.text =currentQuest[1].questTitle;
+        questDesc.text=currentQuest[1].questDescription;
     }
-    
+    public void AcceptQuest()
+    {
+        characterScript.instance.GetComponent<CharacterQuests>().characterQuests.Add(currentQuest[questToAccept]);
+        currentQuest[questToAccept].isActive=true;
+        acceptedFromNPC.Add(currentQuest[questToAccept]);
+    }
+    public void SaveQuestData()
+    {
+        for(int i = 0;i<currentQuest.Count;i++)
+        {
+            PlayerPrefs.SetInt("isActive",currentQuest[i].isActive ? 1 : 0); 
+        }
+    }
 }

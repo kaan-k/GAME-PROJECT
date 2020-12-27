@@ -173,9 +173,17 @@ public class CharacterCreation : MonoBehaviour
     {
         
         //PrefabUtility.ApplyPrefabInstance(this.gameObject,InteractionMode.AutomatedAction);
-        if(currentGear==null)
+        if(currentGear==null || playerName==null)
         {
-            error.text = "You must choose a class before starting the game.";
+            if(playerName==null)
+            {
+                error.text = "You must choose a name before starting the game.";
+            }
+            else
+            {
+                error.text = "You must choose a class before starting the game.";
+            }
+            
         }
         else
         {
