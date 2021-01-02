@@ -280,82 +280,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &176895302
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 176895303}
-  - component: {fileID: 176895305}
-  - component: {fileID: 176895304}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &176895303
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176895302}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 857482347}
-  m_Father: {fileID: 1429994593}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 600}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &176895304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176895302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: afe4fb6836b063346b1702757681eacd, type: 3}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &176895305
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176895302}
-  m_CullTransparentMesh: 0
 --- !u!1 &268716354
 GameObject:
   m_ObjectHideFlags: 0
@@ -12779,12 +12703,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!224 &521903245 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8958287388103488061, guid: 9f7415842f8e5db46878060480995a21,
-    type: 3}
-  m_PrefabInstance: {fileID: 1358142349}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &748692610
 GameObject:
   m_ObjectHideFlags: 0
@@ -13060,111 +12978,21 @@ MonoBehaviour:
   quests:
   - questTitle: Welcome To The City
     questDescription: Go into the city hall.
-    questCode: 1
+    questCode: 0
     isActive: 0
     isVisible: 0
-    lvlReq: 3
+    codeGenerated: 0
+    lvlReq: 0
     goldReward: 0
     expReward: 0
     questGoal:
       goalType: 0
       requiredAmount: 0
       currentAmount: 0
-      isCompleted: 0
-  - questTitle: Meet The Major
-    questDescription: Find the Town Major
-    questCode: 2
-    isActive: 0
-    isVisible: 0
-    lvlReq: 4
-    goldReward: 0
-    expReward: 0
-    questGoal:
-      goalType: 0
-      requiredAmount: 0
-      currentAmount: 0
+      exploringName: 
       isCompleted: 0
   questMarkerQuest: {fileID: 101608808}
   questMarkerCompletedQuest: {fileID: 0}
---- !u!1 &857482346
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 857482347}
-  - component: {fileID: 857482349}
-  - component: {fileID: 857482348}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &857482347
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 857482346}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 176895303}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000052452, y: -0.0000011921}
-  m_SizeDelta: {x: 299.90817, y: 500.3297}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &857482348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 857482346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 7d45ad3cbe2d49e418eea4a911a56cec, type: 3}
-    m_FontSize: 31
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 
---- !u!222 &857482349
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 857482346}
-  m_CullTransparentMesh: 0
 --- !u!1001 &887144709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13476,7 +13304,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 499adbf11ae95b14b9ccbfafaea62dc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quests: []
+  quests:
+  - questTitle: Enter The Hall
+    questDescription: Explore the city hall by entering it.
+    questCode: 2
+    isActive: 0
+    isVisible: 0
+    codeGenerated: 0
+    lvlReq: 2
+    goldReward: 0
+    expReward: 2000
+    questGoal:
+      goalType: 2
+      requiredAmount: 1
+      currentAmount: 0
+      exploringName: The City Hall
+      isCompleted: 0
   questMarkerQuest: {fileID: 1179363358}
   questMarkerCompletedQuest: {fileID: 0}
 --- !u!114 &1262164124
@@ -13628,7 +13471,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262164122}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.515, y: 0.32, z: 0}
+  m_LocalPosition: {x: -3.771, y: 0.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1179363359}
@@ -14165,18 +14008,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quests:
-  - questTitle: Times of Need
-    questDescription: Bring 10 cherries.
-    questCode: 
+  - questTitle: Find The Market
+    questDescription: Go to the east and reach The Market
+    questCode: 3
     isActive: 0
     isVisible: 0
+    codeGenerated: 0
     lvlReq: 0
     goldReward: 0
-    expReward: 0
+    expReward: 150
     questGoal:
-      goalType: 0
+      goalType: 2
       requiredAmount: 0
       currentAmount: 0
+      exploringName: The Market
       isCompleted: 0
   questMarkerQuest: {fileID: 748692611}
   questMarkerCompletedQuest: {fileID: 0}
@@ -14343,14 +14188,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 668696426, guid: 9f7415842f8e5db46878060480995a21, type: 3}
-      propertyPath: m_Name
-      value: CharStats
-      objectReference: {fileID: 0}
-    - target: {fileID: 949267564, guid: 9f7415842f8e5db46878060480995a21, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8958287388103488034, guid: 9f7415842f8e5db46878060480995a21,
         type: 3}
       propertyPath: m_Camera
@@ -14466,49 +14303,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8958287389361508191, guid: 9f7415842f8e5db46878060480995a21,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.00048828125
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f7415842f8e5db46878060480995a21, type: 3}
---- !u!1 &1429994592
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1429994593}
-  m_Layer: 5
-  m_Name: QuestList
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1429994593
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429994592}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 176895303}
-  m_Father: {fileID: 521903245}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 417, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1467851118
 GameObject:
   m_ObjectHideFlags: 0
@@ -14929,6 +14725,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1766693860, guid: b720b5dd6f836bd47a7245a5a3813393, type: 3}
+      propertyPath: characterQuests.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766693860, guid: b720b5dd6f836bd47a7245a5a3813393, type: 3}
+      propertyPath: characterQuests.Array.data[0].questCode
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766693860, guid: b720b5dd6f836bd47a7245a5a3813393, type: 3}
+      propertyPath: characterQuests.Array.data[0].questTitle
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766693860, guid: b720b5dd6f836bd47a7245a5a3813393, type: 3}
+      propertyPath: characterQuests.Array.data[0].questDescription
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989957482563050060, guid: b720b5dd6f836bd47a7245a5a3813393,
+        type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2421538397701106825, guid: b720b5dd6f836bd47a7245a5a3813393,
         type: 3}
       propertyPath: m_Name
@@ -14942,7 +14759,7 @@ PrefabInstance:
     - target: {fileID: 4490034895348896253, guid: b720b5dd6f836bd47a7245a5a3813393,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.861
+      value: -4.282
       objectReference: {fileID: 0}
     - target: {fileID: 4490034895348896253, guid: b720b5dd6f836bd47a7245a5a3813393,
         type: 3}
@@ -40785,6 +40602,50 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1938081527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1938081529}
+  - component: {fileID: 1938081528}
+  m_Layer: 0
+  m_Name: UsedQuestCodes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1938081528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938081527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376735da185606d4aba8fe324e077497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  createdQuestCodes: []
+--- !u!4 &1938081529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938081527}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.0742874, y: -0.7777175, z: -0.23676395}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1995927212 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2620622558488686057, guid: ca56298444b5a6d42ac7157dae02a81c,
@@ -40797,6 +40658,80 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 5584338801780497516}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1167936226450249547
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1167936225897004416, guid: b8d605e60750ba649822691d11929a64,
+        type: 3}
+      propertyPath: m_Name
+      value: ExplorationTriggers
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167936225897004421, guid: b8d605e60750ba649822691d11929a64,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167936225897004421, guid: b8d605e60750ba649822691d11929a64,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167936225897004421, guid: b8d605e60750ba649822691d11929a64,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167936225897004421, guid: b8d605e60750ba649822691d11929a64,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167936225897004421, guid: b8d605e60750ba649822691d11929a64,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167936225897004421, guid: b8d605e60750ba649822691d11929a64,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167936225897004421, guid: b8d605e60750ba649822691d11929a64,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167936225897004421, guid: b8d605e60750ba649822691d11929a64,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167936225897004421, guid: b8d605e60750ba649822691d11929a64,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167936225897004421, guid: b8d605e60750ba649822691d11929a64,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167936225897004421, guid: b8d605e60750ba649822691d11929a64,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167936225897004423, guid: b8d605e60750ba649822691d11929a64,
+        type: 3}
+      propertyPath: areaName
+      value: The Market
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b8d605e60750ba649822691d11929a64, type: 3}
 --- !u!1001 &3021737753193109306
 PrefabInstance:
   m_ObjectHideFlags: 0

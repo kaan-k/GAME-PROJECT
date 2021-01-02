@@ -73,6 +73,20 @@ public class characterScript : MonoBehaviour
         }
         
         transform.position = new Vector3(Mathf.Clamp(transform.position.x,bottomLeftLimit.x,topRightLimit.x),Mathf.Clamp(transform.position.y,bottomLeftLimit.y,topRightLimit.y),transform.position.z);
+        
+        
+        if(Input.GetKeyDown(KeyCode.L))
+        {
+            if(QuestDisplay.instance.questWindow.activeSelf)
+            {
+                QuestDisplay.instance.CloseQuestWindow();
+            }
+            else
+            {
+                QuestDisplay.instance.DisplayQuests();
+            }
+            
+        }
     }
     public void SetBounds(Vector3 botLeft,Vector3 topRight)
     {

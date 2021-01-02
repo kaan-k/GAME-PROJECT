@@ -13,7 +13,7 @@ public class CharacterCreation : MonoBehaviour
     public Text error;
     int counter=0;
     int haircounter=0;
-    int classcounter=0;
+    public int classcounter=0;
     public string playerName;
     bool thereisGear = false;
     public string[] classDescriptions;
@@ -136,9 +136,9 @@ public class CharacterCreation : MonoBehaviour
     public void classRight()
     {
         classcounter--;
-        if(classcounter == 0)
+        if(classcounter <= 0)
         {
-            classcounter = classStart.Length;
+            classcounter = classStart.Length-1;
         }
         if(currentGear==null)
         {

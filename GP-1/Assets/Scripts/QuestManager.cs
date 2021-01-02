@@ -43,7 +43,7 @@ public class QuestManager : MonoBehaviour
                 questButtons[i-1].gameObject.SetActive(true);
                 questTexts[i-1].text = questList[i-1].questTitle;
             }
-            
+
         }
 
     }
@@ -88,12 +88,22 @@ public class QuestManager : MonoBehaviour
         characterScript.instance.GetComponent<CharacterQuests>().characterQuests.Add(currentQuest[questToAccept]);
         currentQuest[questToAccept].isActive=true;
         acceptedFromNPC.Add(currentQuest[questToAccept]);
+        DeactivateButtons();
     }
     public void SaveQuestData()
     {
-        for(int i = 0;i<currentQuest.Count;i++)
+        for(int i = 0;i<characterScript.instance.GetComponent<CharacterQuests>().characterQuests.Count;i++)
         {
-            PlayerPrefs.SetInt("isActive",currentQuest[i].isActive ? 1 : 0); 
+            PlayerPrefs.SetInt("isActive",characterScript.instance.GetComponent<CharacterQuests>().characterQuests[i].isActive ? 1 : 0);
+            PlayerPrefs.Save(); 
+        }
+    }
+    public void LoadQuestData()
+    {
+        for(int i = 0;i<characterScript.instance.GetComponent<CharacterQuests>().characterQuests.Count;i++)
+        {
+            PlayerPrefs.GetInt("isActive",characterScript.instance.GetComponent<CharacterQuests>().characterQuests[i].isActive ? 1 : 0); 
+            PlayerPrefs.Save();
         }
     }
 }

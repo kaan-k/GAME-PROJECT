@@ -90,7 +90,7 @@ public class characterStats : MonoBehaviour
             currentHP = maxHP;
             if(mpLvlBonus.Length <= playerLevel)
             {
-                maxMP = maxMP+mpLvlBonus[playerLevel];
+                //maxMP = maxMP+mpLvlBonus[playerLevel];
             }
             
             currentMP = maxMP;

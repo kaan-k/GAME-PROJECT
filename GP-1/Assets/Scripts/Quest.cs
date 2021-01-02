@@ -10,10 +10,10 @@ public class Quest
     public string questCode;
     public bool isActive;
     public bool isVisible;
+    public bool codeGenerated;
     public int lvlReq;
     public int goldReward;
     public int expReward;
-    const string glyphs= "abcdefghijklmnopqrstuvwxyz0123456789";
     //public gameobject item reward -- possibly
     //enum for reward types
     //locking quests behind level or achievment requirements
@@ -21,11 +21,7 @@ public class Quest
     public QuestGoal questGoal;
     void Start()
     {
-        //automaticly create questCode
-        for(int i=0; i<5; i++)
-        {
-            questCode += glyphs[Random.Range(0, glyphs.Length)];
-        }
+
     }
 
     // Update is called once per frame

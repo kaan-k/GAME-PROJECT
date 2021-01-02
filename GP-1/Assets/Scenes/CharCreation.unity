@@ -3449,6 +3449,11 @@ PrefabInstance:
       propertyPath: descriptionText
       value: 
       objectReference: {fileID: 1987918953}
+    - target: {fileID: 1989957482563050059, guid: b720b5dd6f836bd47a7245a5a3813393,
+        type: 3}
+      propertyPath: raceDescriptions.Array.data[2]
+      value: Black
+      objectReference: {fileID: 0}
     - target: {fileID: 1989957482563050062, guid: b720b5dd6f836bd47a7245a5a3813393,
         type: 3}
       propertyPath: def

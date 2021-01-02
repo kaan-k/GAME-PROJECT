@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - character-stats-display
+  - exploration-trigger
   layers:
   - Default
   - TransparentFX
